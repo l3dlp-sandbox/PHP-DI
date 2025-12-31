@@ -27,7 +27,7 @@ class ContainerBuilderTest extends TestCase
 	private static function getProperty(object $object, string $propertyName)
 	{
 		return (function (string $propertyName) {
-			return $this->$propertyName;
+			return $this->$propertyName ?? null;
 		})->bindTo($object, $object)($propertyName);
 	}
 

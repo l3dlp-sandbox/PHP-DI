@@ -38,7 +38,7 @@ class ProxyFactory implements ProxyFactoryInterface
      *
      * {@inheritDoc}
      */
-    public function createProxy(string $className, \Closure $createFunction): object
+    public function createProxy(string $className, \Closure $createFunction) : object
     {
         return $this->proxyManager()->createProxy(
             $className,
